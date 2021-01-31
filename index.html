@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Escape</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="manifest.json">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+        <meta name="theme-color" content="#EAD152"/>
+        <link rel="shortcut icon" href="icon.png">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="msapplication-TileImage" href="icon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">  
+    </head>
+    <body>
+        <div id="games" style="display: flex;">
+            <p class="description">Kies het spel</p>
+            <div class="genre">
+                <p class="description">Escape Room The Game</p>
+                <div class="game selected" id="ER_1">Prison Break</div>
+                <div class="game" id="ER_2">Virus</div>
+                <div class="coming" id="ER_3">Nuclear Countdown</div>
+                <div class="coming" id="ER_4">Temple of the Aztecs</div>
+            </div>
+            <button style="display: block;">Start!</button>
+        </div>
+        <div id="room" style="display: none;">
+            <div id="room-info">
+                <p id="timer">00:00</p>
+            </div>
+            <p class="description">De 1e code</p>
+            <p class="uitleg">Vul hier letters of cijfers in. Wordt in de puzzel gevraagd om iets anders, vul dan de corresponderende cijfers in.</p>
+            <p class="message"><br></p>
+            <div id="input">
+                <input type="text" maxlength="4" id="effort-3" placeholder="XXXX"/>
+            </div>
+            <button style="display: block;">Check!</button>
+        </div>
+        <div id="escaped" style="display: none;">
+            <div id="icon"></div>
+            <p class="description">Jullie zijn ontsnapt!</p> 
+            <p id="time"></p>            
+        </div>
+        <div id="progressbar"></div>
+        <script src="confetti.js"></script>
+        <script src="escape.js"></script>
+    </body>
+</html>

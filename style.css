@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #D6FFF6;
+    --back-color: #231651;
+    --secundary-color: #4DCCBD;
+    --secundary-color-shade: #2E9E91;
+    --tertair-color: #FF8484;
+}
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Luckiest Guy';
+    font-size: 18px;
+    color: white;
+}
+#progressbar {
+    height: 20px;
+    width: 0%;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    background-color: white;
+}
+
+#games, #room, #escaped {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--back-color);
+    width: 90%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+    #escaped p.description,
+    #room p.description,
+    #games p.description {
+        font-size: 2rem;
+    }
+        #room p.description {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        #room p.message {
+            margin-top: 0;
+            color: #2374AB;
+            width: 100%;
+            text-align: center;
+        }
+        #room p.uitleg {
+            width: 100%;   
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            #room p.uitleg {
+                width: 50%;
+            }
+        }
+    #games .genre {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -20px;
+    }
+    #games .genre + .genre {
+        margin-top: 25px;
+    }
+        #games .genre p.description {
+            width: 100%;
+            flex-shrink: 0;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        #games .coming,
+        #games .game {
+            padding: 20px;
+            background-color: var(--secundary-color);
+            color: white;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+            #games .coming {
+                cursor: default;
+                background-color: #90DFD6;
+                color: grey;
+            }
+            #games .game:hover {
+                box-shadow: 5px 5px var(--secundary-color-shade);
+            }
+            #games .game.selected {
+                background-color: var(--secundary-color-shade);
+            }
+            #games .game.selected:hover {
+                box-shadow: 5px 5px var(--secundary-color);
+            }
+    #room #input {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    input[type="number"],input[type="text"] {
+        width: 100%;
+        font-size: 3rem;
+        color: white;
+        background: none;
+        border: none;
+        text-transform:uppercase;
+        text-align: center;
+        font-family: 'Luckiest Guy';
+    }
+    
+    input[type="number"]:focus,input[type="text"]:focus {
+        outline: none;
+    }
+
+button {
+    background-color: var(--tertair-color);
+    color: white;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    margin: 40px 0px;
+    cursor: pointer;
+    font-family: 'Luckiest Guy';
+}
+    button:hover, button:focus {
+        border: none;
+        outline: none;
+        box-shadow: 5px 5px white;
+        color: white;
+    }
+
+    #progressbar {
+        height: 20px;
+        width: 0%;
+        bottom: 0px;
+        left: 0;
+        position: absolute;
+        background-color: white;
+    }
+    #room-info {
+        background: var(--primary-color);
+        color: var(--back-color);
+        padding: 10px 25px;
+        top: -50px;
+        position: absolute;
+    }
+        #timer {
+            font-size: 3rem;
+            margin: 0;
+
+        }
