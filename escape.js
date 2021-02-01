@@ -68,11 +68,11 @@ function prepareRoom(selectedGameID){
             time = 60;
             break;
         case 'ER_3': 
-            solutions = ['','','',''];
+            solutions = ['1622','5411','CDFE'];
             time = 60;
             break;
         case 'ER_4': 
-            solutions = ['','','',''];
+            solutions = ['4563','1362','5463'];
             time = 60;
             break;
     }
